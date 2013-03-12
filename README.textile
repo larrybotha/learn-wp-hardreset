@@ -8,6 +8,8 @@ A hard reset is used in this theme both to illustrate what methods have been use
 
 The theme is provided as is, with no styling. A graphic or screenshot of a basic design should be provided to the learner, who should then attempt to implement that design using this theme.
 
+**Note:** The !graphics folder is for the purpose of this repo ONLY. Graphics files not explicitly used by a theme should not be made part of the theme, and thus not included in any environment; development or production.
+
 h2. Resources
 
 Some useful resources for web development newcomers:
