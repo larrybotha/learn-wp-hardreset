@@ -28,7 +28,7 @@
 	<?php endif; // check for comment navigation ?>
 
 	<ol class="commentlist">
-		<?php wp_list_comments('callback=custom_theme_comment'); ?>
+		<?php wp_list_comments(); ?>
 	</ol>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
@@ -51,26 +51,27 @@
 <?php endif; // end have_comments() ?>
 
 <?php
-$custom_comment_form = array( 'fields' => apply_filters( 'comment_form_default_fields', array(
+$custom_comment_form = array(
+	'fields' => apply_filters( 'comment_form_default_fields', array(
     'author' => '<p class="comment-form-author">' .
 			'<input id="author" name="author" type="text" value="' .
-			esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' class="required" />' .
+			esc_attr( $commenter['comment_author'] ) . '" size="30"' . ' class="required" />' .
 			'<label for="author">' . __( 'Your Name' , 'theme-name' ) . '</label> ' .
 			( $req ? '<span class="required">*</span>' : '' ) .
 			'</p>',
     'email'  => '<p class="comment-form-email">' .
-			'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' class="required email" />' .
+			'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . ' class="required email" />' .
 			'<label for="email">' . __( 'Your Email' , 'theme-name' ) . '</label> ' .
 			( $req ? '<span class="required">*</span>' : '' ) .
 			'</p>',
     'url'    =>  '<p class="comment-form-url">' .
-			'<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' />' .
+			'<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30"' . ' />' .
 			'<label for="website">' . __( 'Your Website' , 'theme-name' ) . '</label> ' .
 			'</p>') ),
 	'comment_field' => '<p class="comment-form-comment">' .
 			'<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="required"></textarea>' .
 			'</p>',
-	'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+	'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post->id ) ) ) ) . '</p>',
 	'title_reply' => __( 'Leave a Reply' , 'theme-name' ),
 	'comment_notes_before' => '',
 	'comment_notes_after' => '',

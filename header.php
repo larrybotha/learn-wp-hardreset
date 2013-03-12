@@ -42,7 +42,7 @@
 
 	</head>
 
-	<body <?php body_class($class); ?>>
+	<body <?php body_class(); ?>>
 
 	<div id="pagewrap">
 
@@ -54,8 +54,8 @@
 			</hgroup>
 
 			<?php // main navigation ?>
-			<nav id="main-nav-wrap">
-				<?php wp_nav_menu(array('theme_location' => 'main-nav' , 'fallback_cb' => 'default_main_nav' , 'container'  => '' , 'menu_id' => 'main-nav' , 'menu_class' => 'main-nav')); ?>
+			<nav id="primary-nav-wrap">
+				<?php wp_nav_menu(array('theme_location' => 'primary-nav' , 'fallback_cb' => 'default_main_nav' , 'container'  => '' , 'menu_id' => 'primary-nav' , 'menu_class' => 'primary-nav')); ?>
 			</nav>
 
 			<?php // get searchform.php ?>
@@ -63,11 +63,6 @@
 				<?php get_search_form(); ?>
 			</div>
 
-			<div class="social-widget">
-				<div class="rss"><a href="<?php echo bloginfo('rss2_url'); ?>">RSS</a></div>
-			</div><!-- .social-widget -->
-
 		</header><!-- #header -->
 
-		<div id="body" class="pagewidth
-		">
+		<div id="body" class="pagewidth">

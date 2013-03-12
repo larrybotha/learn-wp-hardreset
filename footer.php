@@ -19,14 +19,5 @@
 	<!-- wp_footer -->
 	<?php wp_footer(); ?>
 
-	<?php
-		/*
-		 * Add your theme's scripts. This will eventually be moved to functions.php,
-		 * which wp_footer() will then reference for where and when to output your
-		 * scripts.
-		 */
-	?>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/theme.script.js"></script>
-
 	</body>
 </html>
