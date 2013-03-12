@@ -1,7 +1,18 @@
-learn-wp-hardreset
-==================
+h1. Learn WordPress - hardreset version
 
-A basic WordPress theme containing only a hard reset.
+This is a very basic WordPress theme meant to assist new web developers in gaining a very basic knowledge of WordPress, while allowing them to hone their skills in basic markup and CSS.
+
+No PHP skills are required - the aim of this theme is to showcase the WordPress environment, while providing a dynamic platform suitable for basic HTML and CSS skills development.
+
+A hard reset is used in this theme both to illustrate what methods have been used in the past to create a consistent base, and to illustrate the pitfalls of using such a reset.
+
+The theme is provided as is, with no styling. A graphic or screenshot of a basic design should be provided to the learner, who should then attempt to implement that design using this theme.
+
+h2. Resources
+
+Some useful resources for web development newcomers:
+- "A Beginner's Guide to HTML and CSS":http://learn.shayhowe.com/html-css/
+- "Codecadamey Web Fundamentals":http://www.codecademy.com/tracks/web
 
 h5. License
 
