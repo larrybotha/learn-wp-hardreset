@@ -1,28 +1,27 @@
-<?php get_header(); ?>		
+<?php get_header(); ?>
 
-	<div id="content" class="clearfix">
-		
+	<div id="content">
+
 		<?php // the loop ?>
 		<?php if (have_posts()) : ?>
-		
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'themify' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-		
+
+			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'theme_name' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+
 			<?php while (have_posts()) : the_post(); ?>
-	
+
 				<?php get_template_part( 'includes/loop' , 'search'); ?>
-	
+
 			<?php endwhile; ?>
-							
+
 			<?php get_template_part( 'includes/pagination'); ?>
-		
+
 		<?php else : ?>
-	
-			<p><?php _e( 'Sorry, nothing found. Please try again with a different keyword.', 'themify' ); ?></p>
-	
-		<?php endif; ?>			
-	
-	</div>
-	<!-- /#content -->
+
+			<p><?php _e( 'Sorry, nothing found. Please try again with a different keyword.', 'theme_name' ); ?></p>
+
+		<?php endif; ?>
+
+	</div><!-- #content -->
 
 <?php get_sidebar(); ?>
 

@@ -1,8 +1,8 @@
-<?php if(function_exists('themify_pagenav')){ ?>
-	<?php themify_pagenav(); ?> 
+<?php if(function_exists('theme_name_pagenav')){ ?>
+	<?php theme_name_pagenav(); ?>
 <?php } else { ?>
 	<div class="post-nav">
-		<span class="prev"><?php next_posts_link(__('&laquo; Older Entries', 'themify')) ?></span>
-		<span class="next"><?php previous_posts_link(__('Newer Entries &raquo;', 'themify')) ?></span>
+		<span class="prev"><?php next_posts_link(__('&laquo; Older Entries', 'theme_name')) ?></span>
+		<span class="next"><?php previous_posts_link(__('Newer Entries &raquo;', 'theme_name')) ?></span>
 	</div>
 <?php } ?>
