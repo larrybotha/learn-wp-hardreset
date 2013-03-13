@@ -1,20 +1,24 @@
-		</div><!-- #body -->
+		</div><!-- .primary-content -->
 
-		<footer id="footer" class="pagewidth">
-
-			<p class="back-top"><a href="#header">&uarr;</a></p>
+		<footer class="footer">
 
 			<?php // footer navigation ?>
-			<?php wp_nav_menu(array('theme_location' => 'footer-nav' , 'fallback_cb' => '' , 'container'  => '' , 'menu_id' => 'footer-nav' , 'menu_class' => 'footer-nav')); ?>
+			<?php
+				wp_nav_menu(array(
+					'theme_location' => 'footer-nav',
+					'fallback_cb' => '',
+					'container'  => '',
+					'menu_id' => 'footer-nav',
+					'menu_class' => 'footer-nav'
+					)
+				);
+			?>
 
 			<div class="footer-text">
-				<?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?><br>
-				Powered by <a href="http://wordpress.org">WordPress</a>
+				<?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?> | Powered by <a href="http://wordpress.org">WordPress</a>
 			</div><!-- .footer-text -->
 
-		</footer><!-- #footer -->
-
-	</div><!-- #pagewrap -->
+		</footer><!-- .footer -->
 
 	<!-- wp_footer -->
 	<?php wp_footer(); ?>

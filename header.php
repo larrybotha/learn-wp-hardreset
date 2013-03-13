@@ -44,25 +44,30 @@
 
 	<body <?php body_class(); ?>>
 
-	<div id="pagewrap">
-
-		<header id="header" class="pagewidth">
+		<header class="header">
 
 			<hgroup>
-				<h1 id="site-logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-				<h2 id="site-description"><?php bloginfo('description'); ?></h2>
+				<h1 class="site-logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo('description'); ?></h2>
 			</hgroup>
 
 			<?php // main navigation ?>
-			<nav id="primary-nav-wrap">
-				<?php wp_nav_menu(array('theme_location' => 'primary-nav' , 'fallback_cb' => 'default_main_nav' , 'container'  => '' , 'menu_id' => 'primary-nav' , 'menu_class' => 'primary-nav')); ?>
+			<nav class="primary-nav-wrap">
+				<?php
+					wp_nav_menu( array(
+							'theme_location' => 'primary-nav',
+							'fallback_cb' => 'default_primary_nav',
+							'container'  => '',
+							'menu_id' => 'primary-nav',
+							'menu_class' => 'primary-nav'
+						)
+					);
+				?>
 			</nav>
 
 			<?php // get searchform.php ?>
-			<div id="searchform-wrap">
-				<?php get_search_form(); ?>
-			</div>
+			<?php get_search_form(); ?>
 
-		</header><!-- #header -->
+		</header><!-- .header -->
 
-		<div id="body" class="pagewidth">
+		<div class="primary-content">

@@ -1,22 +1,44 @@
-<?php if(!is_single()) : global $more; $more = 0; endif; //enable more link ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("post $class"); ?>>
+	<time datetime="<?php the_time('o-m-d') ?>" pubdate><?php the_time('M j, Y') ?></time>
 
-	<time datetime="<?php the_time('o-m-d') ?>" class="post-date" pubdate><?php the_time('M j, Y') ?></time>
+	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
-	<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+	<p>
+		<span>Written by: <?php the_author_posts_link() ?>,</span>
 
-	<p class="post-meta">
-		<span class="post-author"><?php the_author_posts_link() ?></span>
-		<span class="post-category"><?php the_category(', ') ?></span>
-		<?php the_tags(' <span class="post-tag">', ', ', '</span>'); ?>
+		<?php
+			/*
+			 * Check if we have categories before outputting any markup
+			 */
+		?>
+		<?php if (has_category()): ?>
+			<span>categorised under: <?php the_category(', ') ?>,</span>
+		<?php endif ?>
+
+		<?php
+			/*
+			 * Check if we have tags before outputting any markup
+			 */
+		?>
+		<?php if (has_tag()): ?>
+		and tagged: <?php the_tags(' <span class="post-tag">', ', ', '</span>'); ?>
+		<?php endif ?>
+
+		<?php
+			/*
+			 * Check if comments are enabled on this post before outputting any markup
+			 */
+		?>
 		<?php if ( comments_open() ) : ?>
-			<span class="post-comment"><?php comments_popup_link( __( '0 Comment', 'theme_name' ), __( '1 Comment', 'theme_name' ), __( '% Comments', 'theme_name' ) ); ?></span>
-		<?php endif; //post comment ?>
+			<span>
+				<?php
+					comments_popup_link( __( '0 Comment', 'theme_name' ), __( '1 Comment', 'theme_name' ), __( '% Comments', 'theme_name' ) );
+				?>
+			</span>
+		<?php endif;?>
 	</p>
 
 	<?php the_content(); ?>
-
-	<?php edit_post_link(__('Edit', 'theme_name'), '[', ']'); ?>
 
 </article><!-- .post -->

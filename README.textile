@@ -10,11 +10,14 @@ The theme is provided as is, with no styling. A graphic or screenshot of a basic
 
 **Note:** The !graphics folder is for the purpose of this repo ONLY. Graphics files not explicitly used by a theme should not be made part of the theme, and thus not included in any environment; development or production.
 
-h2. Resources
+h2. Prerequsites
 
-Some useful resources for web development newcomers:
-- "A Beginner's Guide to HTML and CSS":http://learn.shayhowe.com/html-css/
-- "Codecadamey Web Fundamentals":http://www.codecademy.com/tracks/web
+Before attempting to skin this theme, it is a good idea to get a basic knowledge of HTML and CSS.
+
+Some excellent resources are:
+# "A Beginner's Guide to HTML and CSS":http://learn.shayhowe.com/html-css/
+# "Codecadamey Web Fundamentals":http://www.codecademy.com/tracks/web
+# "Bocoup Group's Learn CSS Layout":http://learnlayout.com/
 
 h5. License
 

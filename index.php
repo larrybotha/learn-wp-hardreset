@@ -1,17 +1,17 @@
 <?php get_header(); ?>
 
-	<div id="content">
+	<div class="content">
 
 		<?php // the loop ?>
 		<?php if (have_posts()) : ?>
 
 			<?php while (have_posts()) : the_post(); ?>
 
-				<?php get_template_part( 'includes/loop' , 'index'); ?>
+				<?php get_template_part( 'inc/loop'); ?>
 
 			<?php endwhile; ?>
 
-			<?php get_template_part( 'includes/pagination'); ?>
+			<?php get_template_part( 'inc/pagination'); ?>
 
 		<?php else : ?>
 
@@ -19,7 +19,7 @@
 
 		<?php endif; ?>
 
-	</div><!-- #content -->
+	</div><!-- .content -->
 
 <?php get_sidebar(); ?>
 
