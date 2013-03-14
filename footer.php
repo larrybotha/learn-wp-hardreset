@@ -1,3 +1,12 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * @package WordPress
+ * @subpackage Theme_Name
+ * @since Theme Name 1.0
+ */
+?>
 		</div><!-- .primary-content -->
 
 		<footer class="footer-content">
