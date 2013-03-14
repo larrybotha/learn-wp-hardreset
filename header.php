@@ -47,12 +47,23 @@
 		<header class="header">
 
 			<hgroup>
+				<?php
+					/*
+					 * Only use and H1 for text on the home page. This is to ensure that
+					 * page content is not diluted on other pages where the H1 is
+					 * valuable for SEO.
+					 */
+				?>
+				<?php if (is_front_page()): ?>
 				<h1 class="site-logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo('description'); ?></h2>
+				<?php else: ?>
+				<span class="site-logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></span>
+				<span class="site-description"><?php bloginfo('description'); ?></span>
+				<?php endif ?>
 			</hgroup>
 
-			<?php // main navigation ?>
-			<nav class="primary-nav-wrap">
+			<nav role="navigation">
 				<?php
 					wp_nav_menu( array(
 							'theme_location' => 'primary-nav',
@@ -70,4 +81,4 @@
 
 		</header><!-- .header -->
 
-		<div class="primary-content">
+		<div class="primary-content" role="main">

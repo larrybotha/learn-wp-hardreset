@@ -14,13 +14,6 @@
 		) );
 	}
 
-	// Default Primary Nav Function
-	function default_primary_nav() {
-		echo '<ul id="primary-menu" class="primary-menu">';
-		wp_list_pages('title_li=');
-		echo '</ul>';
-	}
-
 	// Register Widgets
 	if ( function_exists('register_sidebar') ) {
 		register_sidebar(array(
@@ -31,6 +24,35 @@
 			'before_title' => '<h4 class="widgettitle">',
 			'after_title' => '</h4>',
 		));
+	}
+
+	// =functions
+
+	// Default Primary Nav Function
+	if (!function_exists('default_primary_nav')) {
+		function default_primary_nav() {
+			echo '<ul id="primary-menu" class="primary-menu">';
+			wp_list_pages('title_li=');
+			echo '</ul>';
+		}
+	}
+
+	// custom comment callback
+	if ( ! function_exists( 'theme_name_comment' ) ) {
+		/**
+		 * Template for comments and pingbacks.
+		 *
+		 * To override this walker in a child theme without modifying the comments template
+		 * simply create your own theme_name_comment(), and that function will be used instead.
+		 *
+		 * Used as a callback by wp_list_comments() for displaying the comments.
+		 *
+		 * @since Learn WordPress - Hard Reset Version
+		 */
+		function theme_name_comment( $comment, $args, $depth ) {
+			$GLOBALS['comment'] = $comment;
+			include 'comment-single.php';
+		}
 	}
 
 ?>

@@ -2,7 +2,16 @@
 
 	<time datetime="<?php the_time('o-m-d') ?>" pubdate><?php the_time('M j, Y') ?></time>
 
-	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+	<?php
+		/*
+		 * If we're on a single post, don't output a link to the article
+		 */
+	?>
+	<?php if (is_single()) : ?>
+		<h1><?php the_title(); ?></h1>
+	<?php else: ?>
+		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+	<?php endif ?>
 
 	<p>
 		<span>Written by: <?php the_author_posts_link() ?>,</span>
@@ -39,6 +48,11 @@
 		<?php endif;?>
 	</p>
 
-	<?php the_content(); ?>
+	<?php if (!is_single()): ?>
+		<?php the_excerpt(); ?>
+		<a href="<?php the_permalink() ?>">read more</a>
+	<?php else: ?>
+		<?php the_content(); ?>
+	<?php endif ?>
 
 </article><!-- .post -->

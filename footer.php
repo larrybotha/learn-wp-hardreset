@@ -1,6 +1,6 @@
 		</div><!-- .primary-content -->
 
-		<footer class="footer">
+		<footer class="footer-content">
 
 			<?php // footer navigation ?>
 			<?php
@@ -14,14 +14,14 @@
 				);
 			?>
 
-			<div class="footer-text">
+			<div>
 				<?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?> | Powered by <a href="http://wordpress.org">WordPress</a>
 			</div><!-- .footer-text -->
 
 		</footer><!-- .footer -->
 
-	<!-- wp_footer -->
-	<?php wp_footer(); ?>
+		<!-- wp_footer -->
+		<?php wp_footer(); ?>
 
 	</body>
 </html>
