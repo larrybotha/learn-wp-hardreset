@@ -12,6 +12,13 @@ The theme is provided as is, with no styling. A graphic or screenshot of a basic
 
 h2. Prerequsites
 
+Before working on any of the source, a basic knowledge of version control systems and Git is useful:
+
+Some great resources for installing and learning how to use Git:
+# "Try Git on Code School":http://www.codeschool.com/courses/try-git
+# "Installing Git on Pro Git":http://git-scm.com/book/en/Getting-Started-Installing-Git
+# "Git Command Aliases":http://gitready.com/intermediate/2009/02/06/helpful-command-aliases.html
+
 Before attempting to skin this theme, it is a good idea to get a basic knowledge of HTML and CSS.
 
 Some excellent resources are:
