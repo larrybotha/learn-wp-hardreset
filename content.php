@@ -42,7 +42,7 @@
 		<?php if ( comments_open() ) : ?>
 			<span>
 				<?php
-					comments_popup_link( __( '0 Comment', 'theme_name' ), __( '1 Comment', 'theme_name' ), __( '% Comments', 'theme_name' ) );
+					comments_popup_link( __( '0 Comments', 'theme_name' ), __( '1 Comment', 'theme_name' ), __( '% Comments', 'theme_name' ) );
 				?>
 			</span>
 		<?php endif;?>

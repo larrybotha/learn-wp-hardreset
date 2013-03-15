@@ -55,10 +55,10 @@
 					 */
 				?>
 				<?php if (is_front_page()): ?>
-				<h1 class="site-logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+				<h1 class="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo('description'); ?></h2>
 				<?php else: ?>
-				<span class="site-logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></span>
+				<span class="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></span>
 				<span class="site-description"><?php bloginfo('description'); ?></span>
 				<?php endif ?>
 			</hgroup>

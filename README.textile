@@ -34,7 +34,7 @@ Some great resources for installing and learning how to use Git:
 
 h3. Learn HTML and CSS basics
 
-Before attempting to skin this theme, it is a good idea to get a basic knowledge of HTML and CSS.
+Before attempting to skin this theme, it is a good idea to grasp a basic knowledge of HTML and CSS.
 
 Some excellent resources are:
 # "A Beginner's Guide to HTML and CSS":http://learn.shayhowe.com/html-css/
