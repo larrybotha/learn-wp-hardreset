@@ -10,7 +10,18 @@ The theme is provided as is, with no styling. A graphic or screenshot of a basic
 
 **Note:** The !graphics folder is for the purpose of this repo ONLY. Graphics files not explicitly used by a theme should not be made part of the theme, and thus not included in any environment; development or production.
 
-h2. Prerequsites
+h2. Prerequisites
+
+h3. Text Editor
+
+A good text editor makes all the difference in the learning process. I recommend "Sublime Text":http://www.sublimetext.com/2 as it is well featured, has an active community behind it, and is available on all platforms.
+
+h3. Setup A Local Server
+
+To run WordPress, you'll need a server running PHP, and MySQL. There are a number of easy to setup Apache servers which will do a lot of the heavy lifting for you:
+# "Windows: install WAMP":http://www.wikihow.com/Install-WAMP
+# "Mac: install MAMP":http://sawmac.com/mamp/
+# "Linux: install LAMP":http://www.linux.com/learn/tutorials/288158-easy-lamp-server-installation
 
 h3. Use Git
 
@@ -29,6 +40,10 @@ Some excellent resources are:
 # "A Beginner's Guide to HTML and CSS":http://learn.shayhowe.com/html-css/
 # "Codecadamey Web Fundamentals":http://www.codecademy.com/tracks/web
 # "Bocoup Group's Learn CSS Layout":http://learnlayout.com/
+
+h2. Setup
+
+
 
 h5. License
 
