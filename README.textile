@@ -13,6 +13,7 @@ The theme is provided as is, with no styling. A graphic or screenshot of a basic
 h2. Prerequsites
 
 h3. Use Git
+
 Before working on any of the source, a basic knowledge of version control systems and Git is useful:
 
 Some great resources for installing and learning how to use Git:
