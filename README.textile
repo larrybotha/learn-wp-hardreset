@@ -45,7 +45,7 @@ h2. Setup
 
 # "Download WordPress":http://wordpress.org/download/
 # "Install WordPress":http://codex.wordpress.org/Installing_WordPress
-# Clone this repo into your installation's /wp-content/themes/ folder
+# Fork this repo and clone it into your installation's /wp-content/themes/ folder
 # Activate the theme in your WordPress admin via 'Appearance -> Themes'
 # Begin!
 
