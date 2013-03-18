@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying Search Results pages.
+ *
+ * @package WordPress
+ * @subpackage Theme_Name
+ * @since Theme Name 1.0
+ */
+
+get_header(); ?>
 
 	<div class="content">
 
@@ -9,9 +18,7 @@
 				<h1 class="page-title"><?php printf( __( 'Results for: %s', 'theme_name' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
 				<?php while (have_posts()) : the_post(); ?>
-
 					<?php get_template_part( 'content' , get_post_format()); ?>
-
 				<?php endwhile; ?>
 
 				<?php get_template_part( 'pagination'); ?>
@@ -26,5 +33,4 @@
 	</div><!-- .content -->
 
 <?php get_sidebar(); ?>
-
 <?php get_footer(); ?>

@@ -1,6 +1,15 @@
+<?php
+/**
+ * The default template for displaying content. Used for both single and index/archive/search.
+ *
+ * @package WordPress
+ * @subpackage Theme_Name
+ * @since Theme Name 1.0
+ */
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<time datetime="<?php the_time('o-m-d') ?>" pubdate><?php the_time('M j, Y') ?></time>
 
 	<?php
 		/*
@@ -14,8 +23,9 @@
 	<?php endif ?>
 
 	<p>
-		<span>Written by: <?php the_author_posts_link() ?>,</span>
+		<span>Written by: <?php the_author_posts_link() ?>, on</span>
 
+		<time datetime="<?php the_time('o-m-d') ?>" pubdate><?php the_time('M j, Y') ?>,</time>
 		<?php
 			/*
 			 * Check if we have categories before outputting any markup
