@@ -41,12 +41,12 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				endwhile;
 
-				get_template_part('pagination');
+				get_template_part( 'pagination' );
 			?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?> <?php // have_posts() ?>
+		<?php endif; // have_posts() ?>
 
 	</section><!-- .content -->
 

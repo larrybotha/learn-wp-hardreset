@@ -28,6 +28,28 @@
 
 	// =functions
 
+	/**
+	 * Enqueues scripts and styles for front-end.
+	 *
+	 * @since Twenty Twelve 1.0
+	 */
+	function theme_name_scripts_styles() {
+		global $wp_styles;
+
+		/*
+		 * Adds JavaScript to pages with the comment form to support
+		 * sites with threaded comments (when in use).
+		 */
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+			wp_enqueue_script( 'comment-reply', '', '', '', 'true' );
+
+		/*
+		 * Loads our main stylesheet.
+		 */
+		wp_enqueue_style( 'theme_name-style', get_stylesheet_uri() );
+
+	} add_action( 'wp_enqueue_scripts', 'theme_name_scripts_styles' );
+
 	// Default Primary Nav Function
 	if (!function_exists('default_primary_nav')) {
 		function default_primary_nav() {

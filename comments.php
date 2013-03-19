@@ -41,19 +41,18 @@ if ( post_password_required() )
 	$custom_comment_form = array(
 		'fields' => apply_filters( 'comment_form_default_fields', array(
 			'author' => '<p class="comment-form-author">' .
-				'<input id="author" name="author" type="text" value="' .
-				esc_attr( $commenter['comment_author'] ) . '" size="30"' . ' class="required" />' .
 				'<label for="author">' . __( 'Your Name' , 'theme_name' ) . '</label> ' .
 				( $req ? '<span class="required">*</span>' : '' ) .
+				'<input id="author" name="author" type="text" value="' .
+				esc_attr( $commenter['comment_author'] ) . '" size="30"' . ' class="required" />' .
 				'</p>',
 			'email'  => '<p class="comment-form-email">' .
-				'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . ' class="required email" />' .
 				'<label for="email">' . __( 'Your Email' , 'theme_name' ) . '</label> ' .
 				( $req ? '<span class="required">*</span>' : '' ) .
+				'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . ' class="required email" />' .
 				'</p>',
 			'url'    =>  '<p class="comment-form-url">' .
-				'<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30"' . ' />' .
-				'<label for="website">' . __( 'Your Website' , 'theme_name' ) . '</label> ' .
+				'<label for="website">' . __( 'Your Website' , 'theme_name' ) . '</label> ' . '<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30"' . ' />' .
 				'</p>') ),
 			'comment_field' => '<p class="comment-form-comment">' .
 				'<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="required"></textarea>' .

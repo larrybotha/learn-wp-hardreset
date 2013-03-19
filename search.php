@@ -11,7 +11,6 @@ get_header(); ?>
 
 	<div class="content">
 
-		<?php // the loop ?>
 		<?php if (have_posts()) : ?>
 
 			<section>
@@ -21,7 +20,7 @@ get_header(); ?>
 					<?php get_template_part( 'content' , get_post_format()); ?>
 				<?php endwhile; ?>
 
-				<?php get_template_part( 'pagination'); ?>
+				<?php get_template_part( 'pagination' ); ?>
 			</section>
 
 		<?php else : ?>

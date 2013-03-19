@@ -1,9 +1,20 @@
+<?php
+/**
+ * The Header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package WordPress
+ * @subpackage Theme_Name
+ * @since Theme Name 1.0
+ */
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-		<title><?php if (is_home() || is_front_page()) { echo bloginfo('name'); } else { echo wp_title(''); } ?></title>
+		<title><?php if (is_home() || is_front_page()) { echo bloginfo('name'); } else { echo wp_title( '|', true, 'right' ); } ?></title>
 
 		<?php
 			/*
@@ -35,10 +46,6 @@
 			 */
 		?>
 		<?php wp_head(); ?>
-
-		<?php // enqueue comment-reply.js (require for threaded comments)
-			if ( is_singular() && get_option( 'thread_comments' ) )	wp_enqueue_script( 'comment-reply' );
-		?>
 
 	</head>
 
