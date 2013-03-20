@@ -6,7 +6,11 @@
 		// Display trackbacks differently to normal comments.
 	?>
 	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		<p><?php _e( 'Pingback:', 'theme_name' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'theme_name' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php
+			$comment->comment_type == 'pingback' ? _e( 'Pingback:', 'theme_name' ) : _e( 'Trackback:', 'theme_name' );
+			 ?>
+			 <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'theme_name' ), '<span>', '</span>' ); ?>
+		</p>
 	<?php
 			break;
 		default :

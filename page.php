@@ -16,7 +16,7 @@
 	<div class="content">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_tempalte_part('content', 'page') ?>
+			<?php get_template_part('content', 'page') ?>
 		<?php endwhile; ?>
 
 	</div><!-- .content -->

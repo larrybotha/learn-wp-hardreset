@@ -43,15 +43,10 @@
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 			wp_enqueue_script( 'comment-reply', '', '', '', 'true' );
 
-		/*
-		 * Loads our main stylesheet.
-		 */
-		wp_enqueue_style( 'theme_name-style', get_stylesheet_uri() );
-
 	} add_action( 'wp_enqueue_scripts', 'theme_name_scripts_styles' );
 
 	// Default Primary Nav Function
-	if (!function_exists('default_primary_nav')) {
+	if ( ! function_exists( 'default_primary_nav' ) ) {
 		function default_primary_nav() {
 			echo '<ul id="primary-menu" class="primary-menu">';
 			wp_list_pages('title_li=');

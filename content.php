@@ -40,9 +40,6 @@
 			 * Check if we have tags before outputting any markup
 			 */
 		?>
-		<?php if (has_tag()): ?>
-		and tagged: <?php the_tags(' <span class="post-tag">', ', ', '</span>'); ?>
-		<?php endif ?>
 
 		<?php
 			/*
@@ -63,6 +60,12 @@
 		<a href="<?php the_permalink() ?>">read more</a>
 	<?php else: ?>
 		<?php the_content(); ?>
+
+		<?php if (has_tag()): ?>
+		<div>
+			Tags: <?php the_tags(' <span>', ', ', '</span>'); ?>
+		</div>
+		<?php endif ?>
 	<?php endif ?>
 
 </article><!-- .post -->
