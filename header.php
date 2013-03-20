@@ -15,6 +15,8 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 
 		<title><?php if (is_home() || is_front_page()) { echo bloginfo('name'); } else { echo wp_title( '|', true, 'right' ); } ?></title>
+		<meta description="">
+		<meta name="author" content="Name">
 
 		<?php
 			/*
