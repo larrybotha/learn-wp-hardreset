@@ -29,7 +29,9 @@
 	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
 
-	// =actions
+/* *****************************************************************************
+	 &actions
+	 ************************************************************************** */
 
 	/**
 	 * Initialise scripts site-wide
@@ -54,12 +56,12 @@
 	 *
 	 * @since Theme Name 1.0
 	 */
-	function theme_name_enqueue_scripts_styes() {
+	function theme_name_enqueue_scripts_styles() {
 		global $wp_styles;
 
 		/*
-		 * Adds JavaScript to pages with the comment form to support
-		 * sites with threaded comments (when in use).
+		 * Adds JavaScript to pages with the comment form to support sites with
+		 * threaded comments (when in use).
 		 */
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 			wp_enqueue_script( 'comment-reply', '', '', '', 'true' );
@@ -69,7 +71,9 @@
 	} add_action( 'wp_enqueue_scripts', 'theme_name_enqueue_scripts_styles' );
 
 
-	// =functions
+/* *****************************************************************************
+	 &functions
+	 ************************************************************************** */
 
 	// Default Primary Nav Function
 	if ( ! function_exists( 'default_primary_nav' ) ) {
