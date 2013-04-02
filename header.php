@@ -20,7 +20,7 @@
 
 		<?php
 			/*
-			 * Get the site's RSSS feed
+			 * Get the site's RSS feed
 			 */
 		 ?>
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo bloginfo('rss2_url'); ?>">
@@ -50,7 +50,7 @@
 		<?php wp_head(); ?>
 
 	</head>
-
+	<?php flush(); ?>
 	<body <?php body_class(); ?>>
 
 		<header class="header">
